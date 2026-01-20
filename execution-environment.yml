@@ -1,0 +1,48 @@
+version: 3
+
+images:
+  base_image:
+    name: registry.fedoraproject.org/fedora:44
+
+dependencies:
+  python_interpreter:
+    package_system: python3
+  ansible_core:
+    package_pip: ansible-core
+  ansible_runner:
+    package_pip: ansible-runner
+  system:
+  - openssh-clients
+  - sshpass
+  - python3-devel
+#  python:
+#  - catalystcentersdk
+  galaxy:
+    collections:
+    - name: cisco.aci
+    - name: cisco.asa
+#    - name: cisco.catalystcenter
+    - name: cisco.cml
+    - name: cisco.ios
+    - name: cisco.iosxr
+    - name: cisco.nxos
+    - name: cisco.ucs
+    - name: ansible.netcommon
+    - name: ansible.posix
+    - name: ansible.utils
+    - name: community.crypto
+    - name: community.docker
+    - name: community.general
+    - name: community.hashi_vault
+    - name: community.libvirt
+    - name: community.network
+    - name: community.proxmox
+    - name: community.routeros
+    - name: community.vagrant
+    - name: community.yang
+    - name: containers.podman
+    - name: grafana.grafana
+    - name: networktocode.nautobot
+    - name: check_point.gaia
+    - name: check_point.mgmt
+
